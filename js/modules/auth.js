@@ -1,5 +1,7 @@
 // Configurazione API
-const API_URL = 'http://178.18.246.191:3001';
+const API_URL = window.location.hostname === 'dayactor69.github.io' 
+    ? 'http://178.18.246.191:3001'  // URL produzione
+    : 'http://localhost:3001';       // URL sviluppo locale
 
 // Classe per la gestione dell'autenticazione
 export class Auth {
