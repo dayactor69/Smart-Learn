@@ -1,0 +1,80 @@
+/* Stili base per i bottoni */
+.btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* Varianti bottoni */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Bottoni specifici */
+.login-btn {
+    composes: btn btn-outline;
+    position: relative;
+}
+
+.cta-btn {
+    composes: btn btn-primary;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-lg);
+}
+
+.start-btn {
+    composes: btn btn-primary;
+    width: 100%;
+    justify-content: center;
+}
+
+.edit-profile-btn {
+    composes: btn btn-outline;
+}
+
+.filter-btn, .sort-btn {
+    composes: btn btn-outline;
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+}
+
+.filter-btn:hover, .sort-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.suggestion-btn {
+    composes: btn btn-primary;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+
+.suggestion-btn:hover {
+    background-color: var(--primary-color);
+} 

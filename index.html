@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Learn - Piattaforma di Apprendimento AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                Smart Learn
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#lezioni"><i class="fas fa-book"></i> Lezioni</a></li>
+                <li><a href="#profilo"><i class="fas fa-user"></i> Profilo</a></li>
+            </ul>
+            <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Accedi</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Sezione Hero (visibile solo quando non autenticati) -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Benvenuto su Smart Learn</h1>
+                <p class="hero-subtitle">La tua piattaforma di apprendimento potenziata dall'AI</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Personalizzata</h3>
+                        <p>Contenuti adattati al tuo stile di apprendimento</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Traccia Progressi</h3>
+                        <p>Monitora il tuo percorso di apprendimento</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Gamification</h3>
+                        <p>Impara divertendoti con sfide e ricompense</p>
+                    </div>
+                </div>
+                <button class="cta-btn">Inizia Ora</button>
+            </div>
+        </section>
+
+        <!-- Sezione Profilo -->
+        <section id="profilo" class="profilo-section hidden">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-details">
+                        <h2 class="profile-name">Nome Utente</h2>
+                        <p class="profile-email">email@example.com</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-value">0</span>
+                                <span class="stat-label">Lezioni Complete</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">0</span>
+                                <span class="stat-label">XP Totali</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">0</span>
+                                <span class="stat-label">Achievement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="edit-profile-btn">
+                    <i class="fas fa-edit"></i> Modifica Profilo
+                </button>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-grid">
+                <!-- Progresso -->
+                <div class="dashboard-card progress-card">
+                    <h3><i class="fas fa-chart-bar"></i> Il tuo progresso</h3>
+                    <div class="progress-stats">
+                        <div class="stat">
+                            <span class="stat-label">Lezioni completate</span>
+                            <span class="stat-value">0/10</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Streak attuale</span>
+                            <span class="stat-value">0 giorni</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">XP totali</span>
+                            <span class="stat-value">0 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lezioni recenti -->
+                <div class="dashboard-card recent-lessons">
+                    <h3><i class="fas fa-history"></i> Lezioni recenti</h3>
+                    <div class="lessons-list">
+                        <p class="no-lessons">Nessuna lezione completata</p>
+                    </div>
+                </div>
+
+                <!-- Achievement -->
+                <div class="dashboard-card achievements">
+                    <h3><i class="fas fa-medal"></i> Achievement</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Prima Lezione</span>
+                        </div>
+                        <div class="achievement locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Streak 7 giorni</span>
+                        </div>
+                        <div class="achievement locked">
+                            <i class="fas fa-lock"></i>
+                            <span>100 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suggerimenti AI -->
+                <div class="dashboard-card ai-suggestions">
+                    <h3><i class="fas fa-robot"></i> Suggerimenti AI</h3>
+                    <div class="suggestion">
+                        <p>Inizia il tuo percorso di apprendimento!</p>
+                        <button class="suggestion-btn">Vai alle lezioni</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impostazioni -->
+            <div class="profile-sections">
+                <div class="profile-section">
+                    <h3><i class="fas fa-cog"></i> Impostazioni</h3>
+                    <div class="settings-list">
+                        <div class="setting-item">
+                            <label>Notifiche Email</label>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>Tema Scuro</label>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Lezioni -->
+        <section id="lezioni" class="lezioni-section hidden">
+            <div class="section-header">
+                <h2><i class="fas fa-book"></i> Le tue Lezioni</h2>
+                <div class="section-actions">
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i> Filtra
+                    </button>
+                    <button class="sort-btn">
+                        <i class="fas fa-sort"></i> Ordina
+                    </button>
+                </div>
+            </div>
+
+            <div class="lezioni-grid">
+                <!-- Lezione Card -->
+                <div class="lezione-card">
+                    <div class="lezione-header">
+                        <span class="lezione-tag">Base</span>
+                        <span class="lezione-duration"><i class="fas fa-clock"></i> 30 min</span>
+                    </div>
+                    <h3>Introduzione all'AI</h3>
+                    <p>Scopri i fondamenti dell'Intelligenza Artificiale e le sue applicazioni.</p>
+                    <div class="lezione-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span>0% Completato</span>
+                    </div>
+                    <button class="start-btn">
+                        <i class="fas fa-play"></i> Inizia
+                    </button>
+                </div>
+
+                <!-- Lezione Card (Bloccata) -->
+                <div class="lezione-card locked">
+                    <div class="lezione-header">
+                        <span class="lezione-tag">Intermedio</span>
+                        <span class="lezione-duration"><i class="fas fa-clock"></i> 45 min</span>
+                    </div>
+                    <h3>Machine Learning Basics</h3>
+                    <p>Esplora i concetti base del Machine Learning.</p>
+                    <div class="lock-message">
+                        <i class="fas fa-lock"></i>
+                        <span>Completa la lezione precedente per sbloccare</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal di autenticazione -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">
+                    <i class="fas fa-sign-in-alt"></i> Accedi
+                </button>
+                <button class="tab-btn" data-tab="register">
+                    <i class="fas fa-user-plus"></i> Registrati
+                </button>
+                <span class="close">&times;</span>
+            </div>
+
+            <!-- Form di Login -->
+            <form id="loginForm" class="auth-form">
+                <h2><i class="fas fa-lock"></i> Accedi</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="loginEmail" required placeholder="La tua email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginPassword" required placeholder="La tua password">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-sign-in-alt"></i> Accedi
+                </button>
+            </form>
+
+            <!-- Form di Registrazione -->
+            <form id="registerForm" class="auth-form hidden">
+                <h2><i class="fas fa-user-plus"></i> Registrati</h2>
+                <div class="form-group">
+                    <label for="registerName">Nome completo</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="registerName" required placeholder="Il tuo nome">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="registerEmail" required placeholder="La tua email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerPassword" required placeholder="Scegli una password">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-user-plus"></i> Registrati
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Smart Learn</h4>
+                <p>Piattaforma di apprendimento innovativa potenziata dall'intelligenza artificiale.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lezioni">Lezioni</a></li>
+                    <li><a href="#profilo">Profilo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@smartlearn.com</li>
+                    <li><i class="fas fa-phone"></i> +39 123 456 7890</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Smart Learn. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html> 

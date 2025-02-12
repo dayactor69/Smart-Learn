@@ -1,0 +1,147 @@
+/* Card base */
+.card {
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Card varianti */
+.feature-card {
+    composes: card;
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+}
+
+/* Dashboard cards */
+.dashboard-card {
+    composes: card;
+}
+
+.dashboard-card h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+.dashboard-card h3 i {
+    color: var(--primary-color);
+}
+
+/* Lezione card */
+.lezione-card {
+    composes: card;
+}
+
+.lezione-card.locked {
+    opacity: 0.7;
+}
+
+.lezione-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.lezione-tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--font-sm);
+}
+
+.lezione-duration {
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.lezione-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.lezione-card p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-sm);
+}
+
+.lezione-progress {
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-xs);
+}
+
+.progress {
+    height: 100%;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    transition: width 0.3s ease;
+}
+
+.lock-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+    margin-top: var(--spacing-md);
+}
+
+/* Achievement card */
+.achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-align: center;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    background: var(--bg-secondary);
+}
+
+.achievement.locked {
+    opacity: 0.5;
+}
+
+.achievement i {
+    font-size: 1.5em;
+    color: var(--text-secondary);
+}
+
+.achievement span {
+    font-size: var(--font-sm);
+} 
